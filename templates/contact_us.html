@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+<title>Stpeters | Contact Us</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/contact_us.css' %}" />
+
+{% endblock head %}
+
+{% block body %}
+
+		<div class="row">
+		<div class="col s10 offset-s2">
+			<div class="card blue">
+							<div class="card-content white-text">
+					<span class="card-title">CONTACT US</span>
+					<br>
+					<i class="material-icons">location_on</i>
+					<ul>
+					<li>St.Peter’s Vocational Higher Secondary School</li>
+					   <li>Kolenchery - 682 311, Ernakulam District</li>
+					  <li>Kerala, India.</li>
+					</p>
+					<br><br>
+					<p><i class="material-icons">email</i> spvhss@gmail.com</p>
+			</div>
+			</div>
+
+		</div>
+		</div>
+
+{% endblock body %}

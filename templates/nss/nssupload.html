@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+	{% block title %}
+	Nss Upload details
+	{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <style>
+      .title {
+        text-align: center;
+        font-weight: 200;
+        color: rgb(209, 25, 40);
+      }
+      .container p {
+      	color:rgb(72, 94, 196);
+      	font-weight: 150;
+      	font-family: "Times New Roman" ,"Georgia";
+      . submit{
+      	height: 50px;
+      	background-color: rgb(13, 155, 37);
+      }
+      }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+	<br>
+	<h3 class="title">Add a ARTICLE TO NSS Page</h3>
+	<form method='post' enctype="multipart/form-data">
+
+		{% csrf_token %}
+		<br>
+		<br>
+		<p><strong> TITLE</strong></p>
+		<br>
+		{{ form.title}}
+		<br>
+		<br>
+		<p><strong>DESCRIPTION</strong></p>
+		<br>
+		{{ form.description }}
+		<br>
+		<br>
+		<p><strong>UPLOAD IMAGES</strong></p>
+		<br>
+		{{ form.photo }}
+		<br>
+		<br>
+	<input class type="submit" name="submit" value="Submit"	class="submit"/>
+	</form>
+</div>
+
+{% endblock %}
